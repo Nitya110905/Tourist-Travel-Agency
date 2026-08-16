@@ -66,24 +66,24 @@ function About() {
                         </div>
                         <div className="row g-4">
                             {
-                                data && data.map((item)=>{
+                                data && data.map((item, index)=>{
                                     return(
-                                        <div key={item.id} className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                                <div className="team-item">
-                                    <div className="overflow-hidden">
-                                        <img className="img-fluid" src={item.image} alt="Member Image" />
-                                    </div>
-                                    <div className="position-relative d-flex justify-content-center" style={{ marginTop: '-19px' }}>
-                                        <a className="btn btn-square mx-1" href="#"><i className="fab fa-facebook-f" /></a>
-                                        <a className="btn btn-square mx-1" href="#"><i className="fab fa-twitter" /></a>
-                                        <a className="btn btn-square mx-1" href="#"><i className="fab fa-instagram" /></a>
-                                    </div>
-                                    <div className="text-center p-4">
-                                        <h5 className="mb-0">{item.Name}</h5>
-                                        <small>{item.desc}</small>
-                                    </div>
-                                </div>
-                            </div>
+                                        <div key={item.id || index} className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                                            <div className="team-item h-100 d-flex flex-column">
+                                                <div className="overflow-hidden" style={{ height: '250px' }}>
+                                                    <img className="img-fluid w-100 h-100" src={item.image} alt={item.Name || "Member"} style={{ objectFit: 'cover' }} />
+                                                </div>
+                                                <div className="position-relative d-flex justify-content-center" style={{ marginTop: '-19px' }}>
+                                                    <a className="btn btn-square mx-1" href="#!"><i className="fab fa-facebook-f" /></a>
+                                                    <a className="btn btn-square mx-1" href="#!"><i className="fab fa-twitter" /></a>
+                                                    <a className="btn btn-square mx-1" href="#!"><i className="fab fa-instagram" /></a>
+                                                </div>
+                                                <div className="text-center p-4 d-flex flex-column flex-grow-1 justify-content-center">
+                                                    <h5 className="mb-0">{item.Name}</h5>
+                                                    <small>{item.desc}</small>
+                                                </div>
+                                            </div>
+                                        </div>
                                     )
                                 })
                             }
