@@ -88,7 +88,7 @@ function Header({ desc }) {
                                     if (localStorage.getItem('userid')) {
                                         return (
                                             <>
-                                                <Link  onClick={logout} className="nav-item nav-link">Logout</Link>
+                                                <Link to="/Ulogin" onClick={logout} className="nav-item nav-link">Logout</Link>
                                             </>
                                         )
                                     }
