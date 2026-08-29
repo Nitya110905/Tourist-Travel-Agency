@@ -34,14 +34,13 @@ function Ulogin() {
     try {
       const res = await axios.get(`http://localhost:3000/user?email=${email}`)
       console.log(res.data);
-      //Email Match
       const user = res.data[0]
-      if(user.status === "blocked"){
-        toast.error("You are blocked");
-        return false;
-      }
       if (user.email === 0) {
         toast.error("Email does not match");
+        return false;
+      }
+      if(user.status === "blocked"){
+        toast.error("You are blocked");
         return false;
       }
       //password match
