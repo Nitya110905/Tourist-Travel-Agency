@@ -25,7 +25,7 @@ function Uregister() {
         setdata({
             ...data,
             id:new Date().getTime().toString(),
-            status:"unblock",
+            status:"unblocked",
             [e.target.name]:e.target.value
         })
         console.log(data);
