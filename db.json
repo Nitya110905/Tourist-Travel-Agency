@@ -15,6 +15,14 @@
       "phone": "8809799987",
       "pass": "111",
       "status": "unblocked"
+    },
+    {
+      "id": "1787996998670",
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "phone": "253465877",
+      "pass": "123",
+      "status": "unblocked"
     }
   ],
   "admin": [
@@ -52,6 +60,15 @@
       "price": "500",
       "desc": "LM10",
       "country": "Argentina"
+    },
+    {
+      "id": "1787996552816",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb0CkgEZyp-X5QIHRdSUR5Sg2T19PYYr8BiJrhskQzyg&s=10",
+      "country": "Japan",
+      "days": "7",
+      "person": "8",
+      "price": "230",
+      "desc": "Lorem Ipsum"
     }
   ],
   "services": [
@@ -72,6 +89,12 @@
       "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1mzvvVTYYfzgp6MfpqCoW0R78XgLeDmQgvg&s",
       "title": "Refund Policy",
       "desc": "n,ṁ mnbxc,jgksn, dn bcṁn."
+    },
+    {
+      "id": "1787996868637",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsD9OOpf_6DVHE1mAX2KVjdlL7JehF83oJzhyI46i-5w&s=10",
+      "title": "Affordable Packages",
+      "desc": "Lorem"
     }
   ],
   "about": [
