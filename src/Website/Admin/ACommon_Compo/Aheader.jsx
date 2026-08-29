@@ -15,7 +15,7 @@ function Aheader({ desc }) {
         if (!localStorage.getItem("adminid")) {
             redirect("/Alogin")
         }
-    })
+    },[])
     return (
         
         <div>
