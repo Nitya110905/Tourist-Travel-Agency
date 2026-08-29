@@ -1,0 +1,103 @@
+{
+  "user": [
+    {
+      "id": "1723792392021",
+      "name": "def",
+      "email": "def@gmail.com",
+      "phone": "56868687909",
+      "pass": "5678",
+      "status": "blocked"
+    },
+    {
+      "id": "1723792438942",
+      "name": "ghi",
+      "email": "ghi@gmail.com",
+      "phone": "8809799987",
+      "pass": "111",
+      "status": "unblocked"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "pass": "123"
+    }
+  ],
+  "packages": [
+    {
+      "id": "1",
+      "url": "https://static.toiimg.com/photo/msid-86395165,width-96,height-65.cms",
+      "country": "Maldives",
+      "days": "5",
+      "person": "2",
+      "price": 178,
+      "desc": "nLo2DCRC9eE4w2JmuKgVA3fGL3d01k"
+    },
+    {
+      "id": "2",
+      "url": "https://th.bing.com/th/id/R.24b94a99140344d75bd53e00fbf5db5f?rik=7CYJR6j6EJPoeQ&riu=http%3a%2f%2fwww.yurtopic.com%2ftravel%2fdestinations%2fimages%2fswitzerland-places%2fSwiss-Path2.jpg&ehk=1K1MP59kBPxxCDdF%2f3H4MW7iDc8v3gJK34FBjRVUWVQ%3d&risl=&pid=ImgRaw&r=0",
+      "price": 278,
+      "days": "4",
+      "country": "Portugal",
+      "desc": "mlknkdnlkjbjchbslugiulkjnw,mbk,cbliw",
+      "person": "5"
+    },
+    {
+      "id": "1722075593537",
+      "url": "https://images.trvl-media.com/place/553248634335930781/97d04429-6248-4c90-a7c1-b449e8847345.jpg",
+      "days": "3",
+      "person": "5",
+      "price": "500",
+      "desc": "LM10",
+      "country": "Argentina"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "icon": "https://i.pinimg.com/736x/87/8d/17/878d1775ed044001cb3c3efc32acd82f.jpg",
+      "title": "Customer Support",
+      "desc": "bk .k vk kjnkd fvvnkjhnslk v .kjdh"
+    },
+    {
+      "id": "2",
+      "icon": "https://c8.alamy.com/comp/E919YA/green-user-account-icon-E919YA.jpg",
+      "title": "User-Friendly Interface",
+      "desc": "bk .k vk kjnkd fvvnkjhnslk v"
+    },
+    {
+      "id": "1722960507967",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1mzvvVTYYfzgp6MfpqCoW0R78XgLeDmQgvg&s",
+      "title": "Refund Policy",
+      "desc": "n,ṁ mnbxc,jgksn, dn bcṁn."
+    }
+  ],
+  "about": [
+    {
+      "id": "1",
+      "image": "http://localhost:3001/img/team-3.jpg",
+      "Name": "Neil",
+      "desc": "k.jbf.kjbv.kjbek.dbk"
+    },
+    {
+      "id": "2",
+      "image": "http://localhost:3001/img/team-2.jpg",
+      "Name": "Nitin",
+      "desc": "k.jbf.kjbv.kjbek.dbkj."
+    },
+    {
+      "id": "3",
+      "image": "http://localhost:3001/img/team-1.jpg",
+      "Name": "Mukesh",
+      "desc": "k.jbf.kjbv.kjbek.dbkj."
+    },
+    {
+      "id": "4",
+      "image": "http://localhost:3001/img/team-4.jpg",
+      "Name": "Sonam",
+      "desc": "k.jbf.kjbv.kjbek.dbkj."
+    }
+  ]
+}
