@@ -46,7 +46,6 @@ function Aheader({ desc }) {
                 <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                     <a href className="navbar-brand p-0">
                         <h1 className="text-primary m-0"><i className="fa fa-map-marker-alt me-3" />Tourist</h1>
-                        {/* <img src="img/logo.png" alt="Logo"> */}
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="fa fa-bars" />
@@ -54,9 +53,6 @@ function Aheader({ desc }) {
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <div className="navbar-nav ms-auto py-0">
                             <NavLink to="/Dashboard" className="nav-item nav-link">Home</NavLink>
-                            {/* <NavLink to = "/Aabout" className="nav-item nav-link">About</NavLink> */}
-                            {/* <NavLink to="/addservice" className="nav-item nav-link">Services</NavLink> */}
-                            {/* <NavLink to = "/packman" className="nav-item nav-link">Packages</NavLink> */}
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
                                 <div className="dropdown-menu m-0">
@@ -80,7 +76,6 @@ function Aheader({ desc }) {
                             </div>
                             
                             <NavLink to="/usermanage" className="nav-item nav-link">User</NavLink>
-                            <Link to="/Contact" className="nav-item nav-link">Contact</Link>
                         </div>
                         {
                             (
