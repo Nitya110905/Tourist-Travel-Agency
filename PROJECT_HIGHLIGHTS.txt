@@ -1,0 +1,52 @@
+TOURIST - TRAVEL AGENCY
+Key Highlights & Functionalities
+
+
+1. PROJECT OVERVIEW
+
+Tourist is a full-featured Travel Agency web application built with React.js and a JSON-Server REST API backend. It offers a rich user interface for travelers to explore destinations, book tours, and manage profiles, alongside a robust Admin Dashboard to manage packages, services, team members, and users.
+
+
+2. TECH STACK
+
+- Frontend: React.js (v18), React Router DOM (v6)
+- Styling & UI: Bootstrap 5, MDB React UI Kit, FontAwesome Icons
+- HTTP Client: Axios
+- Notifications: React Toastify
+- Mock Backend: JSON-Server (REST API with db.json)
+
+
+3. KEY HIGHLIGHTS & FUNCTIONALITIES
+
+A. Client / User Features:
+  * Home & Navigation: Dynamic landing page featuring destination banners, popular tour packages, services, and client testimonials.
+  * Destination & Packages: Browse available travel packages with detailed itinerary info, duration (days), guest capacity, and pricing.
+  * Online Booking: Interactive booking form for tour reservations.
+  * User Authentication:
+    - User Registration & Login with form validation.
+    - User profile management and editing.
+    - Account status validation (Active / Blocked access control).
+  * Contact & Support: Contact inquiry form and responsive customer support pages.
+  * Error Handling: Custom 404 error page routing.
+
+B. Admin Panel Features:
+  * Admin Authentication: Secure login portal for authorized administrators.
+  * Dashboard Overview: Central control hub to monitor system resources.
+  * Package Management: Full CRUD (Create, Read, Update, Delete) operations for travel packages (destination, image URL, pricing, duration, guests).
+  * Service Management: Add, edit, view, and remove agency service offerings.
+  * Team / About Management: Manage agency staff profiles and about section.
+  * User Management: View registered users and manage user access (Block/Unblock).
+
+
+4. HOW TO RUN THE PROJECT
+
+1. Install Dependencies:
+   npm install
+
+2. Start JSON Server (Backend API):
+   npm run server
+   (Runs on http://localhost:3000)
+
+3. Start React Application (Frontend):
+   npm start
+   (Runs on http://localhost:3000 / http://localhost:3001)
