@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Aheader from '../ACommon_Compo/Aheader';
 import Afooter from '../ACommon_Compo/Afooter';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import API from '../../../api';
 import { toast } from 'react-toastify';
 
 function Add_profile() {
@@ -31,7 +31,7 @@ function Add_profile() {
     }
 
     try {
-      await axios.post('http://localhost:3000/about', profile);
+      await API.post('/about', profile);
       toast.success('Team guide profile added successfully!');
       setprofile({
         id: '',

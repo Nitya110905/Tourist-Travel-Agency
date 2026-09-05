@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../Comm_Compo/Header'
 import Footer from '../Comm_Compo/Footer'
-import axios from 'axios'
+import API from '../../api'
 
 function Service() {
     const[data,setdata] = useState([])
@@ -9,7 +9,7 @@ function Service() {
         fetchdata()
     },[])
     const fetchdata = async()=>{
-        const res = await axios.get("http://localhost:3000/services");
+        const res = await API.get("/services");
         console.log(res.data);
         setdata(res.data)
     }

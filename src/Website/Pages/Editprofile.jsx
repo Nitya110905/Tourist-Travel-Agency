@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import API from '../../api';
 import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ function Editprofile() {
         redirect('/Ulogin');
         return;
       }
-      const res = await axios.get(`http://localhost:3000/user/${userId}`);
+      const res = await API.get(`/user/${userId}`);
       console.log(res.data);
       setupdate(res.data);
     } catch (error) {
@@ -53,7 +53,7 @@ function Editprofile() {
     }
 
     try {
-      const res = await axios.patch(`http://localhost:3000/user/${update.id}`, update);
+      const res = await API.patch(`/user/${update.id}`, update);
       if (res.status === 200) {
         localStorage.setItem('username', update.name);
         toast.success('Profile updated successfully!');

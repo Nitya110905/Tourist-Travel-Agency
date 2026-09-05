@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import API from '../../api';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -38,7 +38,7 @@ function Uregister() {
     }
 
     try {
-      const res = await axios.post('http://localhost:3000/user', data);
+      const res = await API.post('/user', data);
       console.log(res.data);
       toast.success('Account created successfully! Please login.');
       setdata({

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import Aheader from '../ACommon_Compo/Aheader';
 import Afooter from '../ACommon_Compo/Afooter';
-import axios from 'axios';
+import API from '../../../api';
 import { toast } from 'react-toastify';
 
 function Manage_About() {
@@ -27,7 +27,7 @@ function Manage_About() {
 
   const fetchdata = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/about');
+      const res = await API.get('/about');
       setdata(res.data);
     } catch (error) {
       console.error('Failed to fetch profiles:', error);
@@ -38,7 +38,7 @@ function Manage_About() {
   const del = async (id) => {
     if (window.confirm('Are you sure you want to delete this profile?')) {
       try {
-        await axios.delete(`http://localhost:3000/about/${id}`);
+        await API.delete(`/about/${id}`);
         toast.success('Profile deleted successfully!');
         fetchdata();
       } catch (error) {
@@ -50,7 +50,7 @@ function Manage_About() {
 
   const handleview = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:3000/about/${id}`);
+      const res = await API.get(`/about/${id}`);
       setview(res.data);
     } catch (error) {
       console.error('Failed to fetch profile details:', error);
@@ -67,7 +67,7 @@ function Manage_About() {
   const handleupdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/about/${update.id}`, updated);
+      await API.put(`/about/${update.id}`, updated);
       toast.success('Profile updated successfully!');
       fetchdata();
       setupdate(null);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import Aheader from '../ACommon_Compo/Aheader';
 import Afooter from '../ACommon_Compo/Afooter';
-import axios from 'axios';
+import API from '../../../api';
 import { toast } from 'react-toastify';
 
 function Package_manage() {
@@ -33,7 +33,7 @@ function Package_manage() {
 
   const fetchdata = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/packages');
+      const res = await API.get('/packages');
       setdata(res.data);
     } catch (error) {
       console.error('Failed to fetch packages:', error);
@@ -43,7 +43,7 @@ function Package_manage() {
 
   const handleview = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:3000/packages/${id}`);
+      const res = await API.get(`/packages/${id}`);
       setmodal(res.data);
     } catch (error) {
       console.error('Failed to fetch package details:', error);
@@ -54,7 +54,7 @@ function Package_manage() {
   const del = async (id) => {
     if (window.confirm('Are you sure you want to delete this package?')) {
       try {
-        await axios.delete(`http://localhost:3000/packages/${id}`);
+        await API.delete(`/packages/${id}`);
         toast.success('Package deleted successfully!');
         fetchdata();
       } catch (error) {
@@ -73,7 +73,7 @@ function Package_manage() {
   const handleupdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/packages/${edit.id}`, edited);
+      await API.put(`/packages/${edit.id}`, edited);
       toast.success('Package updated successfully!');
       fetchdata();
       setedit(null);

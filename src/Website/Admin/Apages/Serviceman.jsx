@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import Aheader from '../ACommon_Compo/Aheader';
 import Afooter from '../ACommon_Compo/Afooter';
-import axios from 'axios';
+import API from '../../../api';
 import { toast } from 'react-toastify';
 
 function Serviceman() {
@@ -27,7 +27,7 @@ function Serviceman() {
 
   const fetchdata = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/services');
+      const res = await API.get('/services');
       setdata(res.data);
     } catch (error) {
       console.error('Failed to fetch services:', error);
@@ -38,7 +38,7 @@ function Serviceman() {
   const del = async (id) => {
     if (window.confirm('Are you sure you want to delete this service?')) {
       try {
-        await axios.delete(`http://localhost:3000/services/${id}`);
+        await API.delete(`/services/${id}`);
         toast.success('Service deleted successfully!');
         fetchdata();
       } catch (error) {
@@ -50,7 +50,7 @@ function Serviceman() {
 
   const handleview = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:3000/services/${id}`);
+      const res = await API.get(`/services/${id}`);
       setview(res.data);
     } catch (error) {
       console.error('Failed to fetch service details:', error);
@@ -67,7 +67,7 @@ function Serviceman() {
   const handleupdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/services/${update.id}`, updated);
+      await API.put(`/services/${update.id}`, updated);
       toast.success('Service updated successfully!');
       fetchdata();
       setupdate(null);

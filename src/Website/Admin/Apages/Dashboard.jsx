@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Aheader from '../ACommon_Compo/Aheader';
 import Afooter from '../ACommon_Compo/Afooter';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import API from '../../../api';
 import { toast } from 'react-toastify';
 
 function Dashboard() {
@@ -17,10 +17,10 @@ function Dashboard() {
   const fetchStats = async () => {
     try {
       const [usersRes, packagesRes, servicesRes, aboutRes] = await Promise.all([
-        axios.get('http://localhost:3000/user'),
-        axios.get('http://localhost:3000/packages'),
-        axios.get('http://localhost:3000/services'),
-        axios.get('http://localhost:3000/about')
+        API.get('/user'),
+        API.get('/packages'),
+        API.get('/services'),
+        API.get('/about')
       ]);
 
       setStats({

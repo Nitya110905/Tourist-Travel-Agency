@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Aheader from '../ACommon_Compo/Aheader';
 import Afooter from '../ACommon_Compo/Afooter';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import API from '../../../api';
 import { toast } from 'react-toastify';
 
 function Service_add() {
@@ -31,7 +31,7 @@ function Service_add() {
     }
 
     try {
-      await axios.post('http://localhost:3000/services', service);
+      await API.post('/services', service);
       toast.success('Service added successfully!');
       setservice({
         id: '',

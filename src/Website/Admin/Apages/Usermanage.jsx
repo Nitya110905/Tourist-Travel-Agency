@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Aheader from '../ACommon_Compo/Aheader';
 import Afooter from '../ACommon_Compo/Afooter';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
-import axios from 'axios';
+import API from '../../../api';
 import { toast } from 'react-toastify';
 
 function Usermanage() {
@@ -12,8 +12,7 @@ function Usermanage() {
     name: '',
     email: '',
     phone: '',
-    status: '',
-    pass: ''
+    status: ''
   });
 
   useEffect(() => {
@@ -22,7 +21,7 @@ function Usermanage() {
 
   const fetchdata = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/user');
+      const res = await API.get('/user');
       setuser(res.data);
     } catch (error) {
       console.error('Failed to fetch users:', error);
@@ -33,7 +32,7 @@ function Usermanage() {
   const handledel = async (id) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        await axios.delete(`http://localhost:3000/user/${id}`);
+        await API.delete(`/user/${id}`);
         toast.success('User deleted successfully!');
         fetchdata();
       } catch (error) {
@@ -45,7 +44,7 @@ function Usermanage() {
 
   const handleview = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:3000/user/${id}`);
+      const res = await API.get(`/user/${id}`);
       setview(res.data);
     } catch (error) {
       console.error('Failed to fetch user details:', error);
@@ -56,12 +55,12 @@ function Usermanage() {
   // Status toggle handler
   const handlestatus = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:3000/user/${id}`);
+      const res = await API.get(`/user/${id}`);
       const currentstatus = res.data.status;
       const isBlocked = currentstatus === 'blocked' || currentstatus === 'block';
       const newStatus = isBlocked ? 'unblocked' : 'blocked';
 
-      const updateRes = await axios.patch(`http://localhost:3000/user/${id}`, { status: newStatus });
+      const updateRes = await API.patch(`/user/${id}`, { status: newStatus });
       if (updateRes.status === 200) {
         if (newStatus === 'unblocked') {
           toast.success('User unblocked successfully!');

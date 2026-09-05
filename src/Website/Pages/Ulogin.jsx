@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import API from '../../api';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -21,7 +21,7 @@ function Ulogin() {
     }
 
     try {
-      const res = await axios.get(`http://localhost:3000/user?email=${email}`);
+      const res = await API.get(`/user?email=${email}`);
       console.log(res.data);
 
       if (res.data.length === 0) {
