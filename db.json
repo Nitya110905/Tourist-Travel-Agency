@@ -100,25 +100,25 @@
   "about": [
     {
       "id": "1",
-      "image": "http://localhost:3001/img/team-3.jpg",
+      "image": "/img/team-3.jpg",
       "Name": "Neil",
       "desc": "k.jbf.kjbv.kjbek.dbk"
     },
     {
       "id": "2",
-      "image": "http://localhost:3001/img/team-2.jpg",
+      "image": "/img/team-2.jpg",
       "Name": "Nitin",
       "desc": "k.jbf.kjbv.kjbek.dbkj."
     },
     {
       "id": "3",
-      "image": "http://localhost:3001/img/team-1.jpg",
+      "image": "/img/team-1.jpg",
       "Name": "Mukesh",
       "desc": "k.jbf.kjbv.kjbek.dbkj."
     },
     {
       "id": "4",
-      "image": "http://localhost:3001/img/team-4.jpg",
+      "image": "/img/team-4.jpg",
       "Name": "Sonam",
       "desc": "k.jbf.kjbv.kjbek.dbkj."
     }
